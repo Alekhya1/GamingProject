@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RestartButtonScript : MonoBehaviour {
-
+    
 	// Use this for initialization
 	void Start () {
 		
@@ -12,11 +12,10 @@ public class RestartButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		
+        Debug.Log(ApplicationsData.blueD.ToString());
 	}
     public void RestartScene()
     {
-        SceneManager.LoadScene("MainBg"); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

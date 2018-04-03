@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bullet
   - enemy
+  - player_red
+  - player_green
+  - player_blue
   layers:
   - Default
   - TransparentFX
@@ -18,6 +21,9 @@ TagManager:
   - Background
   - BlueDalek
   - Enemy
+  - Bullet Layer
+  - Tag1
+  - Tag2
   - 
   - 
   - 
@@ -25,10 +31,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 

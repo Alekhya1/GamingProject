@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class blueDalekControl : MonoBehaviour
 {
-
-    public float moveSpeed;
+   
+    public float moveSpeed,speed=0.1f;
     public GameObject bullet, gameOverText, restartButton, blood;
     //public GameObject life_one, life_two, life_three;
     //public static int playerHealth = 3;
@@ -43,6 +43,8 @@ public class blueDalekControl : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
         {
+            AudioSource shoot = GetComponent<AudioSource>();
+            shoot.Play();
             nextFire = Time.time + fireRate;
             fire();
         }
@@ -63,14 +65,39 @@ public class blueDalekControl : MonoBehaviour
     void FixedUpdate()
     {
         var objPos = GameObject.Find("Player").transform.position;
-        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+        //if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
+        //{
+        //    transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
+        //}
+        //if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+        //{
+        //    transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
+        //}
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
+            Vector2 position = transform.position;
+            position.x -= speed;
+            transform.position = position;
         }
-        if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
+            Vector2 position = transform.position;
+            position.x += speed;
+            transform.position = position;
         }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            Vector2 position = transform.position;
+            position.y -= speed;
+            transform.position = position;
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Vector2 position = transform.position;
+            position.y += speed;
+            transform.position = position;
+        }
+
         var player = GameObject.Find("blue_player");
         Quaternion rot = Quaternion.LookRotation(transform.position - objPos, Vector3.forward);
         transform.rotation = rot;
@@ -91,7 +118,7 @@ public class blueDalekControl : MonoBehaviour
 
         if (collision.gameObject.tag.Equals("enemy"))
         {
-            healthAmount -= 1.0f;
+            healthAmount -= 0.5f;
         }
         //if(collision.gameObject.tag.Equals("enemy"))
         //{
@@ -116,10 +143,15 @@ public class blueDalekControl : MonoBehaviour
         //    }
         if (healthAmount <= 0.2f)
         {
+            ApplicationsData.blueD = 1;
+            gameObject.SetActive(false);
+            Instantiate(blood, transform.position, Quaternion.identity);
             gameOverText.SetActive(true);
             restartButton.SetActive(true);
-            Instantiate(blood, transform.position, Quaternion.identity);
-            gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("player_red").SetActive(false);
+            GameObject.FindGameObjectWithTag("player_green").SetActive(false);
+
+
 
         }
 

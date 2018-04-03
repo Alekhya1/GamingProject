@@ -16,8 +16,10 @@ public class enemyClownScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
+
         if (col.gameObject.tag.Equals("Bullet"))
         {
+            ScoreScriptBlue.scoreValue += 1;
             Instantiate(blood, transform.position, Quaternion.identity);
             Destroy(col.gameObject);
             Destroy(gameObject);

@@ -1429,7 +1429,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "LEVEL 1 OVER \nPROCEED GAME - LV 2"
+  m_Text: "LEVEL TRANQUIL OVER \nPROCEED GAME - LV 2"
 --- !u!222 &1526637232
 CanvasRenderer:
   m_ObjectHideFlags: 0

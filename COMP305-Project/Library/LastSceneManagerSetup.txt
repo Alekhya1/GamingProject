@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/envisage/Documents/Carol/dreds/projects/GamingProject/TGAME/Assets/_Scenes/Menu.unity
+  isLoaded: 1
+  isActive: 1

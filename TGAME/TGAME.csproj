@@ -312,6 +312,7 @@
     <Compile Include="Assets\_Scripts\ScoreScriptBlue.cs" />
     <Compile Include="Assets\_Scripts\ScoreScriptGreen.cs" />
     <Compile Include="Assets\_Scripts\ScoreScriptPRed.cs" />
+    <Compile Include="Assets\gameMainbgController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

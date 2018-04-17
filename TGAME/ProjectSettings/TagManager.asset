@@ -9,6 +9,7 @@ TagManager:
   - player_red
   - player_green
   - player_blue
+  - player_purple
   layers:
   - Default
   - TransparentFX

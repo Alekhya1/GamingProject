@@ -119,6 +119,10 @@ public class redDalekMovementScript : MonoBehaviour {
         {
             healthAmount -= 0.5f;
         }
+        if(collision.gameObject.tag.Equals("Enemy_Green"))
+        {
+            healthAmount -= 1.5f;
+        }
         //if(collision.gameObject.tag.Equals("enemy"))
         //{
         //    playerHealth -= 1;

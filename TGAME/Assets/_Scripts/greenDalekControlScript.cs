@@ -92,7 +92,10 @@ public class greenDalekControlScript : MonoBehaviour {
         {
             healthAmount -= 0.5f;
         }
-       
+        if (collision.gameObject.tag.Equals("Enemy_Green"))
+        {
+            healthAmount -= 1.5f;
+        }
         if (healthAmount <= 0.2f)
         {
             ApplicationsData.greenD =1;

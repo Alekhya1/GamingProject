@@ -14,6 +14,6 @@ public class BulletScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         rb.velocity = new Vector2(velX,velY);
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 7f);
 	}
 }

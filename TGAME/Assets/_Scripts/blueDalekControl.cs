@@ -6,7 +6,7 @@ public class blueDalekControl : MonoBehaviour
 {
    
     public float moveSpeed,speed=0.1f;
-    public GameObject bullet, gameOverText, restartButton, blood;
+    public GameObject bullet, gameOverText, restartButton, blood,singleGameOverText,restartgame;
     //public GameObject life_one, life_two, life_three;
     //public static int playerHealth = 3;
     //int playerLayer, enemyLayer;
@@ -21,19 +21,11 @@ public class blueDalekControl : MonoBehaviour
     void Start()
     {
         healthAmount = 2;
-        // playerLayer = this.gameObject.layer;
-        // enemyLayer = LayerMask.NameToLayer("Enemy");
-        //// Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
-        // life_one = GameObject.Find("life_one");
-        // life_two = GameObject.Find("life_two");
-        // life_three = GameObject.Find("life_three");
-        // life_one.gameObject.SetActive(true);
-        // life_two.gameObject.SetActive(true);
-        // life_three.gameObject.SetActive(true);
-        // rend = GetComponent<Renderer>();
-        // color = rend.material.color;
+      
         gameOverText.SetActive(false);
         restartButton.SetActive(false);
+        singleGameOverText.SetActive(false);
+        restartgame.SetActive(false);
 
 
     }
@@ -48,31 +40,12 @@ public class blueDalekControl : MonoBehaviour
             nextFire = Time.time + fireRate;
             fire();
         }
-        //if (healthAmount <= 0)
-        //{
-        //    Destroy(gameObject);
-        //}
-
-        //       if(Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
-        //       {
-        //           transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
-        //       }
-        //       if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
-        //       {
-        //           transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
-        //       }
+  
     }
     void FixedUpdate()
     {
         var objPos = GameObject.Find("Player").transform.position;
-        //if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
-        //{
-        //    transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
-        //}
-        //if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("Vertical") < -0.5f)
-        //{
-        //    transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime, 0f));
-        //}
+      
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Vector2 position = transform.position;
@@ -150,12 +123,26 @@ public class blueDalekControl : MonoBehaviour
             ApplicationsData.blueD = 1;
             gameObject.SetActive(false);
             Instantiate(blood, transform.position, Quaternion.identity);
-            gameOverText.SetActive(true);
-            restartButton.SetActive(true);
+      
+            if (ApplicationsData.singlePlayerFlag.Equals(1))
+            {
+                singleGameOverText.SetActive(true);
+                gameOverText.SetActive(false);
+                restartButton.SetActive(false);
+                restartgame.SetActive(true);
+            }
+            else
+            {
+                gameOverText.SetActive(true);
+                restartButton.SetActive(true);
+                singleGameOverText.SetActive(false);
+                restartgame.SetActive(false);
+            }
+
+            GameObject.FindGameObjectWithTag("spawner").SetActive(false);
+
             GameObject.FindGameObjectWithTag("player_red").SetActive(false);
             GameObject.FindGameObjectWithTag("player_green").SetActive(false);
-
-
 
         }
 

@@ -19,6 +19,7 @@ public class EnemyGreenClownScript : MonoBehaviour {
 
         if (col.gameObject.tag.Equals("Bullet"))
         {
+            
             ScoreScriptBlue.scoreValue += 5;
             Instantiate(blood, transform.position, Quaternion.identity);
             Destroy(col.gameObject);

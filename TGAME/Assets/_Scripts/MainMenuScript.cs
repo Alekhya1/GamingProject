@@ -9,21 +9,26 @@ public class MainMenuScript : MonoBehaviour {
 	public void PlayGame()
     {
         ApplicationsData.singP = 1;
+        ApplicationsData.singlePlayerFlag = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
     public void PlayGame2()
     {
         ApplicationsData.twoP = 1;
+        ApplicationsData.singlePlayerFlag = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void PlayGame3()
     {
         ApplicationsData.threeP = 1;
+        ApplicationsData.singlePlayerFlag = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void PlayGame4()
     {
         ApplicationsData.fourP = 1;
+        ApplicationsData.singlePlayerFlag = 0;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

@@ -12,10 +12,25 @@ public class RestartButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(ApplicationsData.blueD.ToString());
+       // Debug.Log(ApplicationsData.blueD.ToString());
 	}
     public void RestartScene()
     {
+       
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void RestartSceneGameOver()
+    {
+        ApplicationsData.singP = 0;
+        ScoreScriptBlue.scoreValue = 0;
+        SceneManager.LoadScene(0);
+        
+    }
+    public void StartFinalScene()
+    {
+
+        SceneManager.LoadScene("Level3");
+    }
+
 }

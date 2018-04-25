@@ -17,16 +17,23 @@ public class gameControlScript : MonoBehaviour {
         {
             GameObject.Find("Player").SetActive(false);
             GameObject.Find("Player_Four").SetActive(false);
+            GameObject.Find("EnemySpawnerGO (1)").SetActive(false);
+            GameObject.Find("EnemySpawnerGO (2)").SetActive(false);
+
         }
         else if (valR.Equals(1))
         {
             GameObject.Find("Player_Two").SetActive(false);
             GameObject.Find("Player_Four").SetActive(false);
+            GameObject.Find("EnemySpawnerGO").SetActive(false);
+            GameObject.Find("EnemySpawnerGO (1)").SetActive(false);
         }
         else if (valG.Equals(1))
         {
             GameObject.Find("Player_Three").SetActive(false);
             GameObject.Find("Player_Four").SetActive(false);
+            GameObject.Find("EnemySpawnerGO").SetActive(false);
+            GameObject.Find("EnemySpawnerGO (2)").SetActive(false);
         }
         if (valP1.Equals(1))
         {

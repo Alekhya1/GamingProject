@@ -7,5 +7,6 @@ public class ApplicationsData{
     static public int blueD = 0;
     static public int redD = 0;
     static public int greenD = 0;
+    static public int singlePlayerFlag=0;
 
     }

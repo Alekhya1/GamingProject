@@ -11,6 +11,7 @@ TagManager:
   - player_blue
   - player_purple
   - Enemy_Green
+  - spawner
   layers:
   - Default
   - TransparentFX

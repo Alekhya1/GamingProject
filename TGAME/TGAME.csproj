@@ -298,6 +298,7 @@
     <Compile Include="Assets\_Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\_Scripts\enemyClownScript.cs" />
     <Compile Include="Assets\_Scripts\EnemyClownScriptGreen.cs" />
+    <Compile Include="Assets\_Scripts\enemyDoctorWhoScript.cs" />
     <Compile Include="Assets\_Scripts\EnemyGOControl.cs" />
     <Compile Include="Assets\_Scripts\EnemyGOSpawner.cs" />
     <Compile Include="Assets\_Scripts\EnemyGreenClownScript.cs" />
@@ -320,7 +321,9 @@
     <Compile Include="Assets\_Scripts\ScoreScriptBlue.cs" />
     <Compile Include="Assets\_Scripts\ScoreScriptGreen.cs" />
     <Compile Include="Assets\_Scripts\ScoreScriptPRed.cs" />
-    <Compile Include="Assets\enemyDoctorWhoScript.cs" />
+    <Compile Include="Assets\doctorWhoHealthScript.cs" />
+    <Compile Include="Assets\finalBlueDalekHealthScript.cs" />
+    <Compile Include="Assets\finalblueDalekScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

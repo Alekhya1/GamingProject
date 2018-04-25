@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthBarScript : MonoBehaviour {
-    Vector3 localScale;
+    Vector3 localScale1;
 	// Use this for initialization
 	void Start () {
-        localScale = transform.localScale;
+        localScale1 = transform.localScale;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        localScale.x = blueDalekControl.healthAmount;
-        transform.localScale = localScale;
+        localScale1.x = blueDalekControl.healthAmount;
+        transform.localScale = localScale1;
 		
 	}
 }

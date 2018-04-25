@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95850797141544928}
   - component: {fileID: 114367681779002758}
   - component: {fileID: 61751359394489994}
-  - component: {fileID: 114307396642223908}
+  - component: {fileID: 114778917882628434}
   m_Layer: 10
   m_Name: EnemyGO
   m_TagString: Enemy_Green
@@ -116,18 +116,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114307396642223908
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1740044445173446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185129f23ee06424e9ce629d01b56461, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blood: {fileID: 1815696643548050, guid: e6a927cf38a693e4394e4b46ae95f485, type: 2}
 --- !u!114 &114367681779002758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,6 +142,18 @@ MonoBehaviour:
     type: 2}
   BulletR: {fileID: 1162690378979224, guid: b40eafa26035b73429a6a2857ac3a2e1, type: 2}
   BulletL: {fileID: 1162690378979224, guid: b40eafa26035b73429a6a2857ac3a2e1, type: 2}
+--- !u!114 &114778917882628434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1740044445173446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a955d630ea306c42bc7bae011dce106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 1815696643548050, guid: e6a927cf38a693e4394e4b46ae95f485, type: 2}
 --- !u!212 &212009768465983398
 SpriteRenderer:
   m_ObjectHideFlags: 1

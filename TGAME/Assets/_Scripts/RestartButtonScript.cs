@@ -29,7 +29,13 @@ public class RestartButtonScript : MonoBehaviour {
     }
     public void StartFinalScene()
     {
+        Debug.Log("Test");
+        SceneManager.LoadScene("Level3");
 
+    }
+
+    public void TestGoTonEXT()
+    {
         SceneManager.LoadScene("Level3");
     }
 
